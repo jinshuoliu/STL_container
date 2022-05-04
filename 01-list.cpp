@@ -29,7 +29,7 @@ template<typename _Tp>
 struct _List_node : public _List_node_base
 {
   _Tp _M_data;
-}
+};
 
 /**
  * @brief 
@@ -38,7 +38,7 @@ struct _List_node : public _List_node_base
  * @tparam Alloc 
  * @version G2.9
  */
-template <class T, class Alloc = alloc>
+template <class T, class Alloc = allocator>
 class list {
 protected:
   typedef __list_node<T> list_node;
@@ -192,6 +192,7 @@ public:
       transfer(position, first, last);
   }
 
+  void clear();
 
 protected:
   // 配置一个节点并传回
@@ -358,8 +359,7 @@ void list<T, Alloc>::sort() {
  * @tparam _Alloc 
  */
 template <typename _Tp, typename _Alloc = std::allocator<_Tp>>
-class list:protected _List_base<_Tp, _Alloc>
-{
+class list : protected _List_base<_Tp, _Alloc> {
 public:
   typedef _List_iterator<_Tp> iterator;
 ...
