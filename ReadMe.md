@@ -9,6 +9,14 @@
   05-stack.cpp:栈
   06-queue.cpp:队列
   07-heap.cpp:堆
+  08-priority_queue.cpp:带有权值的queue
+  09-slist.cpp:单向链表
+  11-RB-tree.cpp:红黑树
+  12-set_multiset.cpp:红黑树底层的set
+  13-map_multimap.cpp:红黑树底层的map
+  14-hashtable.cpp:散列表
+  15-hash_set_multiset.cpp:散列表底层的set
+  16-hash_map_multimap.cpp:散列表底层的map
 ```
 
 **关于容器的核心精彩的部分是扩充容量：**
